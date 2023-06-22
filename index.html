@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../assets/assets/image/svg/logonav.svg" type="image/x-icon">
+    <title>FT PLANE</title>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- slick-theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick.min -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- aos link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="overflow-hidden">
+    <button onclick="topFunction()" class="fw-normal fs_smm  ff-google-sans" id="scrollBtn" title="Go to top"><img
+            src="./assets/image/svg/toparrow.svg" alt=""></button>
+    <div class="overflow-hidden">
+        <div id="preloader"
+            class="min-vh-100 d-flex align-items-center bg_header justify-content-center  position-fixed w-100 top-0 start-0 z-3 preloader-transition">
+            <div><img src="./assets/image/svg/preloader.svg" alt="#"></div>
+        </div>
+        <!-- herosection starts here  -->
+        <header class="bg_header position-relative">
+            <img class="z-n1 map_bg position-absolute w-100 py-5 " src="./assets/image/png/map_bg_header.png" alt="">
+            <div class="container_css position-relative  pb-5">
+                <!-- navbar starts here  -->
+                <nav class="d-flex justify-content-between pt-2">
+                    <a class="d-flex gap-2" href="#"><img src="./assets/image/svg/logonav.svg" alt="">
+                        <div class="pt-3">
+                            <p class="text-white ff_montserrat fw-bolder fs_xxmd">FT PLANE</p>
+                        </div>
+                    </a>
+
+                    <ul class="d-flex gap-lg-5 gap-3  nav_bar pt-3" id="nav_click">
+                        <li><a class="nav_txt" onclick="navbartoggle()" href="#All_flight">All Flight</a></li>
+                        <li><a class="nav_txt" onclick="navbartoggle()" href="#Schedule">Schedule</a></li>
+                        <li><a class="nav_txt" onclick="navbartoggle()" href="#Passengers">Passengers</a></li>
+                        <li><a class="nav_txt" onclick="navbartoggle()" href="#Yourorders">Your orders</a></li>
+                        <li><a class="fly_btn" onclick="navbartoggle()" href="#Letsfly">Let's fly</a></li>
+                    </ul>
+                    <div class="linebox d-lg-none " onclick="navbartoggle(),myfunction(this)">
+                        <span class="bar1"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
+                    </div>
+
+                </nav>
+                <!-- navbar ends here  -->
+                <h2 class="bg_avition">Aviation</h2>
+                <img class="w-100 airpalne" src="./assets/image/png/airplane.png" alt="">
+                <div class="py-5">
+                    <h1
+                        class="pt-5 text-white animate__animated animate__pulse animate__infinite d-flex justify-content-center pb-4 fs_xxl fw-bold ff_montserrat  ">
+                        Travel
+                        Around The World</h1>
+                    <p
+                        class="pb-5 mb-5 text-center  d-flex justify-content-center clr_gray ff_inter fw-normal fs_xxsm  animate__animated animate__bounce">
+                        One
+                        of the advantages of being
+                        disorganized is that one is
+                        always having surprising discoveries</p>
+                </div>
+            </div>
+        </header>
+        <!-- herosection ends here  -->
+        <!-- infobar section starts here  -->
+        <main class="min-vh-10 0 z-n1">
+            <div class="container_css">
+                <!-- tabs button  -->
+                <div class="transfrom_infobar ">
+                    <div class=" d-flex gap-5 ticket_box ">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link ff_montserrat fw-bold fs_md active tab_button1"
+                                    id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                    role="tab" aria-controls="pills-home" aria-selected="true">Economy</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link ff_montserrat fw-bold fs_md tab_button2" id="pills-profile-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Buisness</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link ff_montserrat fw-bold fs_md tab_button3" id="pills-contact-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false">First</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- tabs content 1 -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="book_now_box row">
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span><img src="./assets/image/svg/location_icon.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Location</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Where are you going?</p>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span><img src="./assets/image/svg/travelers.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Travelers</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add guest</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span> <img src="./assets/image/svg/check_in.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-in</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span><img src="./assets/image/svg/check_out.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-out</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div class="pt-1 d-flex justify-content-center ">
+                                    <a class=" ff_montserrat fw-semibold fs_sm book_now_btn" href="#">
+                                        Book Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs content 2 -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="book_now_box row">
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span> <img src="./assets/image/svg/location_icon.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Travelers</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Where are you going?</p>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span><img src="./assets/image/svg/travelers.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Location</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add guest</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span> <img src="./assets/image/svg/check_in.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-out</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 pt-lg-0 align-items-center  d-flex">
+                                    <span><img src="./assets/image/svg/check_out.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-in</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div class="pt-1 d-flex justify-content-center">
+                                    <a class=" ff_montserrat fw-semibold fs_sm book_now_btn" href="#">
+                                        Book Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs content 3  -->
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="book_now_box row">
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 align-items-center pt-lg-0 d-flex">
+                                    <span> <img src="./assets/image/svg/location_icon.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Travelers</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Where are you going?</p>
+                                    </div>
+
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 align-items-center pt-lg-0 d-flex">
+                                    <span><img src="./assets/image/svg/travelers.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Location</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add guest</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 align-items-center pt-lg-0 d-flex">
+                                    <span><img src="./assets/image/svg/check_in.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-out</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-6 col-10 justify-content-center pt-3 align-items-center pt-lg-0 d-flex">
+                                    <span><img src="./assets/image/svg/check_out.svg" alt=""></span>
+                                    <div class="ps-2">
+                                        <h2 class="ff_montserrat fw-semibold fs_md">Check-in</h2>
+                                        <p class="ff_montserrat fw-normal clr_darkgray fs_sm">Add date</p>
+                                    </div>
+                                </div>
+                                <div class="pt-1 d-flex justify-content-center">
+                                    <a class=" ff_montserrat fw-semibold fs_sm book_now_btn" href="#">
+                                        Book Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!-- infobar section ends here  -->
+
+        <!-- features section starts here  -->
+        <section>
+            <div class="container_css">
+                <h3 class="justify-content-center d-flex ff_montserrat fw-bold fs_xl pb-4 mt-4 mt-lg-0"
+                    data-aos="zoom-in">Our
+                    Features
+                </h3>
+                <div class="row ">
+                    <div class="col-lg-3 col-md-6 col-10 mt-4 mt-lg-0 d-flex justify-content-center m-auto "
+                        data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <div class="feature_box feature_boxesup mt-5">
+                            <span class="justify-content-center d-flex pb-3"> <img src="./assets/image/svg/guide.svg"
+                                    alt=""></span>
+                            <h4 class="pb-2 justify-content-center d-flex ff_montserrat fw-bolder fs_lg">Best Guide</h4>
+                            <p
+                                class="pb-4 justify-content-center d-flex text-center ff_montserrat fw-normal clr_charcoal fs_sm">
+                                Suspendisse ultrices nibh non cursus
+                                sagittis. Morbi dictum consequat ex, quis finibus magna.</p>
+                            <span class="justify-content-center d-flex "> <img src="./assets/image/svg/right_arrow.svg"
+                                    alt=""></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-10 mt-4 mt-lg-0 d-flex justify-content-center m-auto "
+                        data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <div class="feature_box feature_boxesdown"> <span class="justify-content-center d-flex pb-3">
+                                <img src="./assets/image/svg/discount.svg" alt=""></span>
+                            <h4 class="pb-2 justify-content-center d-flex ff_montserrat fw-bolder fs_lg">More Discount
+                            </h4>
+                            <p
+                                class="pb-4 justify-content-center d-flex text-center ff_montserrat fw-normal clr_charcoal fs_sm">
+                                Suspendisse ultrices nibh non cursus
+                                sagittis. Morbi dictum consequat ex, quis finibus magna.</p>
+                            <span class="justify-content-center d-flex "> <img src="./assets/image/svg/right_arrow.svg"
+                                    alt=""></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-10  mt-lg-0 d-flex justify-content-center m-auto "
+                        data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <div class="feature_box feature_boxesup mt-5">
+                            <span class="justify-content-center d-flex pb-3"> <img src="./assets/image/svg/lock.svg"
+                                    alt=""></span>
+                            <h4 class="pb-2 justify-content-center d-flex ff_montserrat fw-bolder fs_lg">Private</h4>
+                            <p
+                                class="pb-4 justify-content-center d-flex text-center ff_montserrat fw-normal clr_charcoal fs_sm">
+                                Suspendisse ultrices nibh non cursus
+                                sagittis. Morbi dictum consequat ex, quis finibus magna.</p>
+                            <span class="justify-content-center d-flex "> <img src="./assets/image/svg/right_arrow.svg"
+                                    alt=""></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-10 mt-4 mt-lg-0 d-flex justify-content-center m-auto "
+                        data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <div class="feature_box feature_boxesdown">
+                            <span class="justify-content-center d-flex p pb-3"> <img src="./assets/image/svg/headphone.svg"
+                                    alt=""></span>
+                            <h4 class="pb-2 justify-content-center d-flex ff_montserrat fw-bolder fs_lg">Online Support
+                            </h4>
+                            <p
+                                class="pb-4 justify-content-center d-flex text-center ff_montserrat fw-normal clr_charcoal fs_sm">
+                                Suspendisse ultrices nibh non cursus
+                                sagittis. Morbi dictum consequat ex, quis finibus magna.</p>
+                            <span class="justify-content-center d-flex "> <img src="./assets/image/svg/right_arrow.svg"
+                                    alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- features section ends here  -->
+                <!-- lets fly section starts here   -->
+                <div class="row my-5 justify-content-between  py-5">
+                    <div class="position-relative col-lg-5 my-5" data-aos="fade-right" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <div>
+                            <img class=" w-100" src="./assets/image/png/adverture.png" alt="">
+                            <img class="position-absolute clouds animate__pulse animate__animated animate__infinite "
+                                src="./assets/image/svg/clouds.svg" alt="">
+                            <img class="position-absolute fivestar animate__pulse animate__animated animate__infinite"
+                                src="./assets/image/svg/5star.svg" alt="">
+                            <img class="position-absolute nyc animate__tada animate__animated animate__infinite"
+                                src="./assets/image/svg/newyork.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 my-5 d-flex justify-content-center m-auto" data-aos="zoom-out-left">
+                        <div class="ms-lg-5  ps-lg-2">
+                            <p class="ff_montserrat fw-bolder fs_xmd clr_lightblue ps-3 lets_fly">Let’s Fly</p>
+                            <h5 class="ff_montserrat fw-bold fs_xlg pb-4 ps-3">It’s one of the leading onpne flight
+                                booking
+                                platforms in the world</h5>
+                            <ul class="custom_disc position-relative">
+
+                                <li class="ff_montserrat fw-medium fs_sm pb-2">Contrary to popular belief, Lorem Ipsum
+                                    is
+                                    not simply random text</li>
+                                <li class="ff_montserrat fw-medium fs_sm pb-2">If you are going to use a passage of
+                                    Lorem
+                                    Ipsum</li>
+                                <li class="ff_montserrat fw-medium fs_sm pb-2">Lorem Ipsum is therefore always free from
+                                    repetition, injected humour, or
+                                    non-characteristic
+                                    words
+                                    etc.</li>
+                                <li class="ff_montserrat fw-medium fs_sm pb-2">It is a long established fact that a
+                                    reader
+                                    will be distracted by the readable content of a
+                                    page
+                                    when
+                                    looking at its layout.</li>
+                            </ul>
+                            <div class="pt-3 ps-3">
+                                <a class="book_now_btn ff_montserrat fw-semibold fs_sm" href="#">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Let’s fly section ends here  -->
+        <!-- book tickets section starts here   -->
+        <section class="bg_ticket_section ">
+            <div class="container_css py-5">
+                <div class="row py-5 justify-content-between">
+                    <div class="col-lg-6" data-aos="zoom-out-left">
+                        <h5 class="text-white ff_montserrat fs_xl fw-bold">Book Popular Flight Tickets</h5>
+                        <p class="clr_gray ff_montserrat fw-normal fs_sm">Lorem Ipsum is simply dummy text of the
+                            printing
+                            and typesetting industry.
+                            Lorem Ipsum has been the industry's</p>
+                        <div class="d-flex justify-content-center"> <img src="./assets/image/png/AirDelivery.png" alt=""></div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-out-right">
+                        <div class="fade1">
+                            <div class="ps-5 ms-5 airdelivery_box">
+                                <div class="row justify-content-between mb-5 pb-5">
+                                    <div class="col-6">
+                                        <h4 class="economy clr_lightblue fs_sm ff_montserrat fw-medium">Economy Saver
+                                        </h4>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold py-4">6 Flight Tickets</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal">Passenger</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">Raju Mullah</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Flight</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">#5486626661</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Class</p>
+                                        <p class="ff_montserrat fs_sm fw-semibold">Economy</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="ps-4">
+                                            <img class="pb-4" src="./assets/image/svg/airdelivery_text.svg" alt="">
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-5">Date</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 Nov 2022</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Gate</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 A</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Seats</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">5B - 11B</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="barcode d-flex justify-content-center">
+                                    <img class="" src="./assets/image/svg/barcode.svg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- slide1  -->
+                            <div class="ps-5 ms-5 airdelivery_box">
+                                <div class="row justify-content-between mb-5 pb-5">
+                                    <div class="col-6">
+                                        <h4 class="economy clr_lightblue fs_sm ff_montserrat fw-medium">Economy Saver
+                                        </h4>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold py-4">6 Flight Tickets</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal">Passenger</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">Raju Mullah</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Flight</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">#5486626661</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Class</p>
+                                        <p class="ff_montserrat fs_sm fw-semibold">Economy</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="ps-4">
+                                            <img class="pb-4" src="./assets/image/svg/airdelivery_text.svg" alt="">
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-5">Date</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 Nov 2022</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Gate</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 A</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Seats</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">5B - 11B</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="barcode d-flex justify-content-center">
+                                    <img class="" src="./assets/image/svg/barcode.svg" alt="">
+                                </div>
+                            </div>
+                            <!-- slide2  -->
+                            <div class="ps-5 ms-5 airdelivery_box">
+                                <div class="row justify-content-between mb-5 pb-5">
+                                    <div class="col-6">
+                                        <h4 class="economy clr_lightblue fs_sm ff_montserrat fw-medium">Economy Saver
+                                        </h4>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold py-4">6 Flight Tickets</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal">Passenger</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">Raju Mullah</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Flight</p>
+                                        <h4 class="ff_montserrat fs_sm fw-semibold">#5486626661</h4>
+                                        <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Class</p>
+                                        <p class="ff_montserrat fs_sm fw-semibold">Economy</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="ps-4">
+                                            <img class="pb-4" src="./assets/image/svg/airdelivery_text.svg" alt="">
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-5">Date</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 Nov 2022</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Gate</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">20 A</h4>
+                                            <p class="fs_xsm ff_montserrat fw-medium clr_charcoal pt-4">Seats</p>
+                                            <h4 class="ff_montserrat fs_sm fw-semibold">5B - 11B</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="barcode d-flex justify-content-center">
+                                    <img class="" src="./assets/image/svg/barcode.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- best travelers section starts here  -->
+        <section>
+            <div class="container_css py-5">
+                <h2 class="d-flex justify-content-center pb-5 ff_montserrat fw-bold fs_xl">Best travelars of this month
+                </h2>
+                <div class="row">
+                    <div data-aos="zoom-in-down"
+                        class="col-lg-3 col-md-6 col-10 m-auto justify-content-center d-flex mb-3 mb-lg-0">
+                        <div class="best_traveler_box img_scale">
+                            <img class="w-100" src="./assets/image/png/traveler1.png" alt="#">
+                            <span class="best_traveler_icon_positi d-flex justify-content-center ">
+                                <img src="./assets/image/png/raju.png" alt="">
+                            </span>
+                            <h6 class="d-flex justify-content-center ff_montserrat fs_lg fw-semibold py-1">Raju Mullah
+                            </h6>
+                            <p class="fs_sm ff_montserrat fw-medium clr_darkgray d-flex justify-content-center">
+                                @rajumulllah
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-down"
+                        class="col-lg-3 col-md-6 col-10 m-auto justify-content-center d-flex mb-3 mb-lg-0">
+                        <div class="best_traveler_box img_scale">
+                            <img class="w-100" src="./assets/image/png/traveler2.png" alt="#">
+                            <span class="best_traveler_icon_positi d-flex justify-content-center">
+                                <img src="./assets/image/png/zaire.png" alt="">
+                            </span>
+                            <h6 class="d-flex justify-content-center ff_montserrat fs_lg fw-semibold py-1">Zaire Vetrovs
+                            </h6>
+                            <p class="fs_sm ff_montserrat fw-medium clr_darkgray d-flex justify-content-center">
+                                @zairevetrovs</p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-down"
+                        class="col-lg-3 col-md-6 col-10 m-auto justify-content-center d-flex mb-3 mb-lg-0">
+                        <div class="best_traveler_box img_scale">
+                            <img class="w-100" src="./assets/image/png/traveler3.png" alt="#">
+                            <span class="best_traveler_icon_positi d-flex justify-content-center">
+                                <img src="./assets/image/png/marcus.png" alt="">
+                            </span>
+                            <h6 class="d-flex justify-content-center ff_montserrat fs_lg fw-semibold py-1">Marcus Dias
+                            </h6>
+                            <p class="fs_sm ff_montserrat fw-medium clr_darkgray d-flex justify-content-center">
+                                @marcusdias
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in-down"
+                        class="col-lg-3 col-md-6 col-10 m-auto justify-content-center d-flex mb-3 mb-lg-0">
+                        <div class="best_traveler_box img_scale">
+                            <img class="w-100" src="./assets/image/png/traveler4.png" alt="#">
+                            <span class="best_traveler_icon_positi d-flex justify-content-center">
+                                <img src="./assets/image/png/davis.png" alt="">
+                            </span>
+                            <h6 class="d-flex justify-content-center ff_montserrat fs_lg fw-semibold py-1">Davis
+                                Schleifer
+                            </h6>
+                            <p class="fs_sm ff_montserrat fw-medium clr_darkgray d-flex justify-content-center">
+                                @davisschleifer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- book tickets section ends here  -->
+        <!-- feedback section starts here  -->
+        <section>
+            <div class="container_css">
+                <p data-aos="zoom-out-down"
+                    class="animate__animated animate__pulse animate__infinite d-flex justify-content-center clr_lightblue ff_montserrat fs_lg fw-semibold animate__animated animate__pulse">
+                    What’s our
+                    customer
+                    saying</p>
+                <h2 data-aos="zoom-out-down" class="d-flex justify-content-center pb-5 ff_montserrat fs_xl fw-bold">Our
+                    Customer Feedback</h2>
+                <div class="row py-5">
+                    <div data-aos="zoom-out-right" class="col-lg-7">
+                        <img class="w-100" src="./assets/image/svg/map_location.svg" alt="">
+                    </div>
+                    <div data-aos="zoom-out-left" class="col-lg-5">
+                        <div class="myslider">
+                            <div class="slider_box">
+                                <div class="d-flex">
+                                    <img src="./assets/image/svg/jaylon.svg" alt="#">
+                                    <div class="ps-2">
+                                        <h4 class="ff_montserrat fw-semibold fs_xmd">Jaylon Vaccaro</h4>
+                                        <img src="./assets/image/svg/jaylonstars.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="ff_montserrat fw-medium fs_md fst-italic pt-3">There are many variations of
+                                    passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which don
+                                </p>
+                            </div>
+
+                            <!-- slide 1 -->
+                            <div class="slider_box">
+                                <div class="d-flex">
+                                    <img src="./assets/image/svg/jaylon.svg" alt="#">
+                                    <div class="ps-2">
+                                        <h4 class="ff_montserrat fw-semibold fs_xmd">Jaylon Vaccaro</h4>
+                                        <img src="./assets/image/svg/jaylonstars.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="ff_montserrat fw-medium fs_md fst-italic pt-3">There are many variations of
+                                    passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which don
+                                </p>
+                            </div>
+                            <!-- slide 2  -->
+                            <div class="slider_box">
+                                <div class="d-flex">
+                                    <img src="./assets/image/svg/jaylon.svg" alt="#">
+                                    <div class="ps-2">
+                                        <h4 class="ff_montserrat fw-semibold fs_xmd">Jaylon Vaccaro</h4>
+                                        <img src="./assets/image/svg/jaylonstars.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="ff_montserrat fw-medium fs_md fst-italic pt-3">There are many variations of
+                                    passages of Lorem Ipsum available, but the majority have
+                                    suffered alteration in some form, by injected humour, or randomised words which don
+                                </p>
+                            </div>
+                        </div>
+                        <ul class="d-flex justify-content-center pe-3">
+                            <li><img class="prev1 pt-1 " src="./assets/image/svg/prevarrow.svg" alt=""></li>
+                            <li><img class="next1 " src="./assets/image/svg/nextarrow.svg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feedback section starts here  -->
+        <!-- memories section starts here  -->
+        <section>
+            <div class="container_css py-5">
+                <h2
+                    class="pb-5 d-flex justify-content-center ff_montserrat fs_xl fw-bold animate__animated animate__pulse animate__infinite">
+                    Make memories with us</h2>
+                <div class="row">
+                    <div data-aos="zoom-out-down" class="col-lg-3 col-md-6 col-10 d-flex justify-content-center m-auto">
+                        <div class="img_transparent_border
+                        "> <img class="w-100 img_transparent_border " src="./assets/image/png/memories1.png" alt="#"></div>
+                    </div>
+                    <div data-aos="zoom-out-down" class="col-lg-3 col-md-6 col-10 d-flex justify-content-center m-auto">
+                        <div class="mt-5 img_transparent_border
+                       "> <img class="w-100 img_transparent_border " src="./assets/image/png/memories2.png" alt="#"></div>
+                    </div>
+                    <div data-aos="zoom-out-down"
+                        class="col-lg-3 col-md-6 col-10 d-flex justify-content-center m-auto mt-5 mt-lg-0">
+                        <div class="img_transparent_border"><img class="w-100 img_transparent_border "
+                                src="./assets/image/png/memories3.png" alt="#"></div>
+                    </div>
+                    <div data-aos="zoom-out-down" class="col-lg-3 col-md-6 col-10 d-flex justify-content-center m-auto">
+                        <div class="mt-5 img_transparent_border"> <img class="w-100 img_transparent_border "
+                                src="./assets/image/png/memories4.png" alt="#"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- memories section ends here  -->
+        <!-- input type section starts here  -->
+        <section class="bg_email_section">
+            <div class="container_css">
+                <div data-aos="zoom-out-down" class="col-lg-5 text-center m-auto py-5">
+                    <h2 class="ff_montserrat fs_xl fw-bold">Subscribe Newsletter & get letest news</h2>
+                    <div class="row justify-content-between">
+                        <div class="email_box d-flex justify-content-between">
+                            <input type="email" name="email" placeholder="Enter your email address" id="email">
+                            <a class="subscribe_btn ff_montserrat fw-semibold fs_sm" href="#">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- input type section ends here  -->
+        <!-- footer starts here  -->
+        <footer class="bg_footer">
+            <div class="container_css pt-5">
+                <div class="row justify-content-between">
+                    <div class="col-lg-4">
+                        <a class="d-flex gap-2" href="#">
+                            <img src="./assets/image/svg/logonav.svg" alt="">
+                            <div class="pt-3">
+                                <p class="text-white ff_montserrat fw-bolder fs_xxmd">FT PLANE</p>
+                            </div>
+                        </a>
+                        <p class="ff_montserrat fw-normal fs_sm clr_darkgray">There are many variations of passages of
+                            Lorem
+                            Ipsum available, but the majority have suffered
+                            alteration in some form</p>
+                        <div class="d-flex">
+                            <img class="socialmedia" src="./assets/image/svg/facebook.svg" alt="">
+                            <img class="socialmedia" src="./assets/image/svg/linkdin.svg" alt="">
+                            <img class="socialmedia" src="./assets/image/svg/twitter.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-10">
+                        <ul>
+                            <li class="text-white fs_lg ff_montserrat fw-bold pb-2">address</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Integrations</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Hello</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Intercom</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Customer</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-10">
+                        <ul>
+                            <li class="text-white fs_lg ff_montserrat fw-bold pb-2">About</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Our Blog</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Customers</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Our Team</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Careers</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Integrations</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-10">
+                        <ul>
+                            <li class="text-white fs_lg ff_montserrat fw-bold pb-2">Support</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Test Zoom</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Account</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Support Center</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Live Training</li>
+                            <li class="ff_montserrat fs_sm fw-normal clr_darkgray pb-3">Accessibility</li>
+                        </ul>
+                    </div>
+                    <p class="pb-1 text-white justify-content-center d-flex ff_montserrat fw-normal fs_xsm gap-1">
+                        Copyright <span><img src="./assets/image/svg/copyright1.svg" alt=""></span> FT PLANE 2022 All right
+                        reserved</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends here  -->
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- slick.min.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- bootstrap link  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <!-- aos link  -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- fade slider  -->
+        <script>
+            $('.fade1').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        </script>
+
+        <!-- navbar js  -->
+        <script>
+            const nav = document.getElementById("nav_click")
+
+            function navbartoggle() {
+                nav.classList.toggle("show")
+                document.body.classList.toggle("overflow_hidden")
+            }
+
+            function myfunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+
+            let mybutton = document.getElementById("scrollBtn");
+
+
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+
+        <!-- slider js  -->
+        <script>
+            $('.myslider').slick({
+                infinite: true,
+                speed: 300,
+                dots: true,
+                nextArrow: ".next1",
+                prevArrow: ".prev1",
+
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+
+                ]
+            });
+
+            const preloader = document.getElementById("preloader")
+
+            setTimeout(() => {
+                preloader.classList.add("d-none")
+                document.body.classList.remove("overflow-hidden")
+            }, 3000)
+        </script>
+    </div>
+</body>
+
+</html>
